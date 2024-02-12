@@ -12,7 +12,7 @@ body {
   gap: 1rem 3rem;
   grid-template-rows: auto auto auto;
   grid-template-columns: auto 1fr;
-  grid-template-areas: "header header" "toc toc" "nav main";
+  grid-template-areas: "header header" "nav main";
 }
 
 a {
@@ -28,11 +28,6 @@ header {
 header .headerIcon {
   width: 50px;
 }
-#tableOfContents{
-  grid-area: toc;
-  text-align: center;
-  display: none;
-}
 
 #sideNavigation {
   grid-area: nav;
@@ -44,14 +39,6 @@ header .headerIcon {
 
 /* hides the side nav and displays the top nav for smaller screens */
 @media only screen and (max-width: 576px){
-  body{
-    grid-template-areas: "header header" "toc toc" "main main";
-  }
-
-  #tableOfContents{
-   display: block;
-  }
-
   #sideNavigation{
     display: none;
   }

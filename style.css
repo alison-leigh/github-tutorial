@@ -10,9 +10,9 @@ body {
   font-family: "Roboto", sans-serif;
   display: grid;
   gap: 1rem 3rem;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto auto auto;
   grid-template-columns: auto 1fr;
-  grid-template-areas: "header header" "nav main";
+  grid-template-areas: "header header" "toc toc" "nav main";
 }
 
 a {
@@ -28,14 +28,33 @@ header {
 header .headerIcon {
   width: 50px;
 }
+#tableOfContents{
+  grid-area: toc;
+  text-align: center;
+  display:none;
+}
 
-nav {
+#sideNavigation {
   grid-area: nav;
   font-size: 0.85rem;
   height: 90vh;
   position: sticky;
   top: 0;
 }
+
+/* hides the side nav and displays the top nav for smaller screens */
+@media only screen and (max-width: 576px){
+  #tableOfContents{
+    display: block;
+  }
+
+  #sideNavigation{
+    display: none;
+  }
+
+}
+
+
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -80,5 +99,3 @@ main ol > li > ul, main ul > li > ul {
   margin-left: 1em;
   border: 1px solid #b2b2b2;
 }
-
-/*# sourceMappingURL=style.css.map */

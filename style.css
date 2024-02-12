@@ -31,7 +31,7 @@ header .headerIcon {
 #tableOfContents{
   grid-area: toc;
   text-align: center;
-  display:none;
+  visibility: hidden;
 }
 
 #sideNavigation {
@@ -45,11 +45,11 @@ header .headerIcon {
 /* hides the side nav and displays the top nav for smaller screens */
 @media only screen and (max-width: 576px){
   #tableOfContents{
-    display: block;
+   visibility: visible;
   }
 
   #sideNavigation{
-    display: none;
+    visibility: hidden;
   }
 
 }

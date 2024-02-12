@@ -90,17 +90,19 @@ main ol > li > ul, main ul > li > ul {
 }
 
 .warning {
+  width: max-content;
   padding: 15px;
   border-left: solid 5px red;
   background: #eeeeee;
-  margin-left: 1em;
+  margin: 1rem;
 }
 
 .supportingInfo {
+  width: max-content;
   padding: 15px;
   border-left: solid 5px #5797f6;
   background: #eeeeee;
-  margin-left: 1em;
+  margin: 1rem;
 }
 
 .supportingImage {

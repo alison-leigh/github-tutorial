@@ -110,3 +110,8 @@ main ol > li > ul, main ul > li > ul {
   border: 1px solid #b2b2b2;
   max-width: 90%;
 }
+
+code{
+  display: block;
+  padding-left: 2em;
+}

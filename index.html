@@ -9,19 +9,20 @@
 
 <body>
 <header>
-    <img class="headerIcon" src="img/git.png"><img class="headerIcon" src="img/github.svg"> <h1>MongoDB & Mongoose</h1>
+    <img class="headerIcon" src="img/mongodb.svg"><img class="headerIcon" src="img/mongoose.png"> <h1>MongoDB & Mongoose</h1>
 </header>
 
 <!-- table of contents, only visible on mobile -->
 <nav id="tableOfContents">
     <details><summary>Table of Contents</summary>
         <ul>
-            <li><a href="#setting-up">Setting Up</a></li>
-            <li><a href="#creating-cloning">Creating & Cloning a GitHub Repository</a></li>
-            <li><a href="#basic-operations">Basic Git Operations</a></li>
-            <li><a href="#branching">Branching</a></li>
-            <li><a href="#remote-repositories">Remote Repositories</a></li>
-            <li><a href="#pull-requests">Pull Requests & Code Reviews</a></li>
+            <h3>MongoDB</h3>
+            <li><a href="#about-mongoDB">About MongoDB</a></li>
+            <li><a href="#integrating-mongoDB">Integrating MongoDB</a></li>
+            <h3>Mongoose</h3>
+            <li><a href="#about-mongoose">About Mongoose</a></li>
+            <li><a href="#integrating-mongoose">Integrating Mongoose</a></li>
+            <li><a href="#common-functionality">Common Functionality</a></li>
         </ul>
     </details>
 
@@ -31,12 +32,13 @@
  these use 'anchor tags' or 'jump links' to navigate to element IDs within the page-->
 <nav id="sideNavigation">
     <ul>
-        <li><a href="#setting-up">Setting Up</a></li>
-        <li><a href="#creating-cloning">Creating & Cloning a GitHub Repository</a></li>
-        <li><a href="#basic-operations">Basic Git Operations</a></li>
-        <li><a href="#branching">Branching</a></li>
-        <li><a href="#remote-repositories">Remote Repositories</a></li>
-        <li><a href="#pull-requests">Pull Requests & Code Reviews</a></li>
+        <h3>MongoDB</h3>
+        <li><a href="#about-mongoDB">About MongoDB</a></li>
+        <li><a href="#integrating-mongoDB">Integrating MongoDB</a></li>
+        <h3>Mongoose</h3>
+        <li><a href="#about-mongoose">About Mongoose</a></li>
+        <li><a href="#integrating-mongoose">Integrating Mongoose</a></li>
+        <li><a href="#common-functionality">Common Functionality</a></li>
     </ul>
 </nav>
 
@@ -44,7 +46,7 @@
 
 <main>
 <!--  Section 1: Setting Up the Environment -->
-<section id="setting-up">
+<section id="about-mongoDB">
 <h2>About MongoDB</h2>
 
 <h3>What is MongoDB?</h3>
@@ -64,13 +66,13 @@
     </p>
 </section>
 <!--  Section 2: Creating and Cloning a GitHub Repository -->
-<section id="creating-cloning">
+<section id="integrating-mongoDB">
 <h2>Integrating MongoDB into the MERN stack</h2>
 <h3>Steps to integrate</h3>
 
 <ul>
 
-    <li><b>Setting up MongoDB:</b> Install MongoDB on your machine or use MongoDB Atlas for a cloud-based solution.</li>
+    <li><b>Setting up MongoDB:</b> Install <a href="https://www.mongodb.com/docs/manual/installation/">MongoDB</a> on your machine or use <a href="https://www.mongodb.com/atlas/database?tck=docs_server">MongoDB Atlas</a> for a free cloud-based solution.</li>
 
     <li><b>Integrating with Node.js</b>: Use Mongoose, an ODM (Object Document Mapping) tool, to connect your Node.js application to your MongoDB database.
     </li>
@@ -90,7 +92,7 @@
     </ul>
 </section>
 <!--  Section 3: Basic Git Operations in VS Code -->
-<section id="basic-operations">
+<section id="about-mongoose">
 <h2>About Mongoose</h2>
 <h3>What is Mongoose?</h3>
     <p>Mongoose is an ODM (Object Data Modeling) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.
@@ -107,7 +109,7 @@
 
 </section>
 <!--  Section 4: Branching with VS Code -->
-<section id="branching">
+<section id="integrating-mongoose">
 <h2>Integrating Mongoose into the MERN stack</h2>
     <p>Mongoose is specifically designed to work within the Node.js environment, making it a crucial component of the MERN stack for handling database operations.</p>
 <h3>Steps to integrate</h3>
@@ -132,24 +134,32 @@
     </ul>
 </section>
 <!--  Section 5: Working with Remote Repositories -->
-<section id="remote-repositories">
-<h2>Working with Remote Repositories</h2>
-<ul>
-    <li><b>Add a Remote Repository:</b> Use the command <code>'git remote add [name] [repository url]'</code> in the terminal.</li>
-    <li><b>Manage Remotes:</b> Push to and pull from remote repositories by selecting the appropriate remote branch from the Source Control sidebar.</li>
-</ul>
-</section>
-<!--  Section 6: Pull Requests and Code Reviews within VS Code -->
-<section id="pull-requests">
-<h2>Pull Requests and Code Reviews within VS Code</h2>
-<h3>Create Pull Requests</h3>
-<ol>
-    <li>Push your Branch to GitHub.</li>
-    <li>Navigate to your repository page on GitHub, and you'll see a prompt to create a pull request for your branch. Follow the instructions to create it.
-    </li>
-</ol>
-<h3>Review and Discuss Pull Requests</h3>
-<p>On GitHub you can review changes, discuss with teammates, and make further commits if necessary. Once approved, you can merge the pull request.</p>
+<section id="common-functionality">
+<h2>Common Functionality</h2>
+<h3>Purpose</h3>
+    <p>To facilitate interaction with MongoDB through easy-to-use schemas, validation, and CRUD operations.</p>
+    <h3>Description</h3>
+    <p>Mongoose simplifies the process of working with MongoDB databases by providing a model-based interface, which allows for defining the structure of the database documents, their default values, validation rules, and more.</p>
+    <h3>Example</h3>
+    <ul>
+        <li>Connecting to MongoDB with Mongoose:</li>
+        <li>Defining a Model:</li>
+        <li>Creating and Saving a Document:</li>
+    </ul>
+    This guide provides a foundational overview of using MongoDB and Mongoose within the MERN stack, highlighting their roles, importance, and how they integrate into modern web development workflows.
+<br>
+    <code>
+const kitty = new Cat({ name: 'Zildjian' });<br>
+
+kitty.save().then(() => console.log('meow'));<br>
+
+const Cat = mongoose.model('Cat', { name: String });<br>
+
+const mongoose = require('mongoose');<br>
+
+mongoose.connect('mongodb://localhost/mydatabase', {useNewUrlParser: true, useUnifiedTopology: true});
+    </code>
+
 </section>
 </main>
 

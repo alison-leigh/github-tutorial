@@ -71,21 +71,28 @@
 <h2>Integrating MongoDB into the MERN stack</h2>
 
     <h3>Dependencies</h3>
-    <p>Before you start...</p>
+    <aside class="warning">⚠️  Ensure the packages listed below are installed on your machine before proceeding.</aside>
     <ul>
-        <li>Install <a href="https://nodejs.org/en">Node.js</a></li>
-        <li>Install <a href="https://www.mongodb.com/try/download/community">MongoDB</a></li>
-        <li>Install <a href="https://www.npmjs.com/package/mongoose">Mongoose</a> to your project using the node package manager (npm) command line.</li>
+        <li><a href="https://nodejs.org/en">Node.js</a></li>
+        <li><a href="https://www.mongodb.com/try/download/community">MongoDB</a></li>
+        <li><a href="https://www.npmjs.com/package/mongoose">Mongoose</a> (via the command terminal in your project)</li>
     </ul>
+
 <h3>Steps to integrate</h3>
-
 <ul>
+<li><b>Setting up MongoDB:</b><ul>
+        <li><strong>To host your own server,</strong> install the community version of <a href="https://www.mongodb.com/docs/manual/installation/">MongoDB</a> on your machine.</li>
 
-    <li><b>Setting up MongoDB:</b> Install <a href="https://www.mongodb.com/docs/manual/installation/">MongoDB</a> on your machine or use <a href="https://www.mongodb.com/atlas/database?tck=docs_server">MongoDB Atlas</a> for a free cloud-based solution.</li>
+        <li><strong>To use a free cloud-based solution,</strong> create a <a href="https://www.mongodb.com/atlas/database?tck=docs_server">MongoDB Atlas</a> account using their free m0 tier.</li>
+    </ul>
+    </li>
 
     <li><b>Integrating with Node.js</b>: Use Mongoose, an ODM (Object Document Mapping) tool, to connect your Node.js application to your MongoDB database.
     </li>
+
+
 </ul>
+    <aside class="supportingInfo">💡 If you're new to MongoDB, MongoDB Atlas is an easier alternative to setting up and running your own server.</aside>
 
     <h3>Configuration considerations</h3>
     <ul>

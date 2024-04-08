@@ -122,3 +122,7 @@ code{
 .active-link{
   border-bottom: 3px solid red;
 }
+
+.idfk{
+  color: red;
+}

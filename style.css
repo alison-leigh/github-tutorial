@@ -40,7 +40,9 @@ header .headerIcon {
   height: 90vh;
   position: sticky;
   top: 0;
+  margin-left: 1em;
 }
+
 
 /* hides the side nav and displays the top nav for smaller screens */
 @media only screen and (max-width: 900px){
@@ -114,4 +116,9 @@ main ol > li > ul, main ul > li > ul {
 code{
   display: block;
   padding-left: 2em;
+}
+
+
+.active-link{
+  border-bottom: 3px solid red;
 }
